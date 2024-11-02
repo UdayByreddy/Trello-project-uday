@@ -1,8 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
 import axios from "axios";
 
-let API = import.meta.env.VITE_API_KEY;    // 8ef3fd189596be018e50c4817d2b84e9
-let TOKEN = import.meta.env.VITE_API_TOKEN; //ATTA00a50a01732c4f7e784f85fe6bbdbef2d2be2f9a4f902719e6100b443902d8fe7F978A8C
+let API = import.meta.env.VITE_API_KEY;    
+let TOKEN = import.meta.env.VITE_API_TOKEN; 
 
 
 //  Curd operation for board
