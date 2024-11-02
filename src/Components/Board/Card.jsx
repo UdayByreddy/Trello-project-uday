@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import { deleteCard } from "../../CurdOperation";
-import CustomCardDialog from "./CustomCardDialog.jsx";
+
 import { Typography, IconButton, Paper } from "@mui/material";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+
+import { deleteCard } from "../../CrudOperation.jsx";
+
+import CustomCardDialog from "./CustomCardDialog.jsx";
 import toast from "react-hot-toast";
 import theme from "../styles/theme";
 

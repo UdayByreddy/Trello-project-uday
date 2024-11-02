@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState, useRef } from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import Checklist from './CheckList';
-import { getChecklists, createChecklist, deleteChecklist } from '../../CurdOperation';
+
 import toast from 'react-hot-toast';
 import { Box, Button, IconButton, Modal, Paper, InputBase, Typography } from '@mui/material';
+
+import Checklist from './CheckList';
+import { getChecklists, createChecklist, deleteChecklist } from '../../CrudOperation';
 import theme from '../styles/theme';
 
 export default function CustomCardDialog({ isOpen, setModalState, cardData, setLoaderState }) {

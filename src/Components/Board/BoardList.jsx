@@ -2,11 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import { getCards, createCard, deleteList } from "../../CurdOperation";
-import Card from "./Card";
-import toast from "react-hot-toast";
-import Toast from '../ErrorHandler/Toast';
+
 import {
     Box,
     Typography,
@@ -14,6 +10,13 @@ import {
     Button,
     Paper,
 } from "@mui/material";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+
+import { getCards, createCard, deleteList } from "../../CrudOperation";
+
+import Card from "./Card";
+import toast from "react-hot-toast";
+import Toast from '../ErrorHandler/Toast';
 import theme from "../styles/theme";
 import MyCustomDialog from "../MyCustomDialog";
 

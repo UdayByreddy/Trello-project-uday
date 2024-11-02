@@ -2,12 +2,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState, useCallback } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faPlus,
     faSquareCheck,
     faTrashCan,
 } from "@fortawesome/free-solid-svg-icons";
+
 import {
     Box,
     Typography,
@@ -17,7 +19,8 @@ import {
     Button,
     CircularProgress,
 } from "@mui/material";
-import { getCheckitems, createCheckitem } from "../../CurdOperation";
+
+import { getCheckitems, createCheckitem } from "../../CrudOperation";
 import Checkitem from "./Checkitem";
 import toast from "react-hot-toast";
 import theme from "../styles/theme";

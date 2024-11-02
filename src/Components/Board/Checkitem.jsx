@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
+
+import { Box, Checkbox, IconButton, Typography } from "@mui/material";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import { deleteCheckitem, updateCheckitem } from "../../CurdOperation";
+
+import { deleteCheckitem, updateCheckitem } from "../../CrudOperation";
 import toast from "react-hot-toast";
 import Toast from "../ErrorHandler/Toast";
-import { Box, Checkbox, IconButton, Typography } from "@mui/material";
 import theme from "../styles/theme";
 
 function Checkitem({ data, cardId, checkitems, setCheckitems, updateProgressBar }) {
