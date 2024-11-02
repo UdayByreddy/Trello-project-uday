@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 
 import React, { useEffect, useState } from "react";
+
 import { useParams, Link } from "react-router-dom";
+
 import {
     Box,
     Typography,
@@ -9,16 +11,21 @@ import {
     IconButton,
     Grid,
 } from "@mui/material";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { getLists, createList } from "../CurdOperation";
+
+import { getLists, createList } from "../CrudOperation";
+
 import toast from "react-hot-toast";
+
 import theme from "../Components/styles/theme";
 import List from "../Components/Board/BoardList";
-import Loader from "../Components/ErrorHandler/Loader"
-import Toast from "../Components/ErrorHandler/Toast"
-import backgroundImage from '../assets/backgroundImage.webp';
+import Loader from "../Components/ErrorHandler/Loader";
+import Toast from "../Components/ErrorHandler/Toast";
 import MyCustomDialog from '../Components/MyCustomDialog'
+
+import backgroundImage from '../assets/backgroundImage.webp';
 
 function ListsItemsPage() {
     const { id } = useParams();

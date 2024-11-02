@@ -6,7 +6,6 @@ import ErrorContent from '../Components/ErrorHandler/ErrorContent'
 export default function ErrorPage() {
   return (
     <>
-    <ButtonAppBar />
     <ErrorContent />
     </>
   )
