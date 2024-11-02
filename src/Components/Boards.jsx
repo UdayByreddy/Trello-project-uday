@@ -1,15 +1,18 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
-import MyCustomDialog from './MyCustomDialog';
-import { Button, Grid, Paper } from '@mui/material';
-import ResponsiveCardLayout from './ResponsiveCardLayout';
-import backgroundImage from '../assets/backgroundImage.webp';
+
 import { Link } from 'react-router-dom';
-import { getAllBoards, createBoard } from '../CurdOperation';
+import { Button, Grid, Paper } from '@mui/material';
+
+import { getAllBoards, createBoard } from '../CrudOperation';
+import ResponsiveCardLayout from './ResponsiveCardLayout';
+import MyCustomDialog from './MyCustomDialog';
 import theme from './styles/theme';
 import Loader from './ErrorHandler/Loader';
 import toast from 'react-hot-toast';
+
+import backgroundImage from '../assets/backgroundImage.webp';
 
 function Boards() {
   const [openDialog, setOpenDialog] = useState(false);
