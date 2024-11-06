@@ -5,24 +5,30 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Grid, Paper } from '@mui/material';
 
-import { getAllBoards, createBoard } from '../CrudOperation';
 import ResponsiveCardLayout from './ResponsiveCardLayout';
 import MyCustomDialog from './MyCustomDialog';
 import theme from './styles/theme';
 import Loader from './ErrorHandler/Loader';
 import toast from 'react-hot-toast';
+import { useDispatch,useSelector } from 'react-redux';
+import { fetchBoards,createBoards } from '../Features/BoardsSlice';
 
 import backgroundImage from '../assets/backgroundImage.webp';
 
 function Boards() {
   const [openDialog, setOpenDialog] = useState(false);
-  const [boards, setBoards] = useState([]); 
+
   const [loader, setLoader] = useState(true);
+
+  const dispatch = useDispatch();
+
+  const {boards} = useSelector((state)=>state.boards);
+
 
   const createHandler = async (inputValue) => {
     try {
-      const createdBoard = await createBoard(inputValue); 
-      setBoards((prevBoards) => [...prevBoards, createdBoard]); 
+      await dispatch(createBoards(inputValue));
+      setOpenDialog(false);
       toast.success(`${inputValue} created successfully!`);
     } catch (error) {
       toast.error(error.message);
@@ -30,19 +36,9 @@ function Boards() {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const boards = await getAllBoards(); 
-        setBoards(boards); 
-      } catch (error) {
-        toast.error(error.message);
-      } finally {
-        setLoader(false);
-      }
-    };
-
-    fetchData();
-  }, []);
+    dispatch(fetchBoards());
+    setLoader(false);
+  }, [dispatch]);
 
   return (
     <Paper
